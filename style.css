@@ -1,0 +1,123 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+}  
+body{
+    background: linear-gradient(to top, #3333ff 0%, #ccccff 100%);
+    padding: 80px 0 0 0;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    padding: 15px;
+}
+.top-cont{
+    text-align: center;
+}
+.addtask{
+    width:100%;
+    display: flex;
+    padding: 10px 0;
+
+}
+
+.addtask > input[type="text"]{
+    width: 100%;
+    color: #333;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    background: none;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+}
+.addtask button{
+    margin: 0 10px;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid goldenrod;
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.addtask button:hover{
+    color: lightskyblue;
+}
+.NotCompleted, .Completed{
+    margin: 5px 0;
+    padding: 10px;
+}
+h3{
+    font-size: 17px;
+    font-style: bold;
+    text-align: center;
+    color: #262629;
+    font-weight: bolder;
+    text-decoration: none;
+    background: rgba(111, 111, 111, 0.3);
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+ol{
+    margin: 0;
+    padding: 0;
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li{
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    background:rgba(0,0,0,0.5);
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(44, 62, 80, 0.10);
+    color: #fff;
+    counter-increment: my-counter;
+}
+ol li:hover {
+    background: rgba(255, 99, 71, 0.8);
+}
+ol.Completed li:hover{
+    background: rgba(60, 179, 113, 0.8);
+}
+ol.Completed li{
+    background:rgba(0,0,0,0.5);
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(44, 62, 80, 0.10);
+    color: black;
+}
+ol li::before{
+    content: counter(my-counter);
+    background: goldenrod;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 70%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+li button{
+    position: relative;
+    float: right;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 28px;
+    margin-right: 10px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    /*background-color: #0a4d8d;*/
+    cursor: pointer;
+    color: black;
+
+}
